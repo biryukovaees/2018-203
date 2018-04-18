@@ -6,6 +6,7 @@
 void biryukovaes::lab1()
 {
 std::cout<<"Hello, world!";
+std::cout<<"Lena, forever!";
 }
 
 
