@@ -51,6 +51,7 @@ int i, j, m, l;
  */
 void biryukovaes::lab3()
 {
+ int n=N-1;
  double* a=new double[N];//Прогоночные коэффициеты
  double* b=new double[N];//
     //Прямая прогонка
@@ -62,8 +63,8 @@ void biryukovaes::lab3()
      b[i]=(b[i]-A[i][i-1]*b[i-1])/(A[i][i-1]*a[i-1]+A[i][i]);
     }
 	//Обратная прогонка
-    x[N-1] = b[N-1];
-    for(int i=N-2; i>=0; i--)
+    x[N] = b[N];
+    for(int i=N-1; i>=0; i--)
      x[i] = a[i]*x[i+1]+b[i];
       delete[] a;
       delete[] b;
